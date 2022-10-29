@@ -1,0 +1,13 @@
+package Axixbank;
+
+public class Axis {
+	public void SavingsAccount() {
+		System.out.println("Am a Saving");
+
+	}
+	public void CurrentAccount() {
+		System.out.println("Am a current");
+
+	}
+
+}

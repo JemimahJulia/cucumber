@@ -1,0 +1,9 @@
+package Day1;
+
+public class Details {
+          public static void main (String [] args) {
+    	long a=12345678l;
+    	System.out.println(a);    	
+    	
+    }
+}

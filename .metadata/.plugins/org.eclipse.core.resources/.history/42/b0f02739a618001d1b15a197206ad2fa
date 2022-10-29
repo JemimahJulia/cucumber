@@ -1,0 +1,9 @@
+package Day1;
+
+public class Details {
+          public static void main (String [] args) {
+    	short a=12;
+    	System.out.println(a);    	
+    	
+    }
+}

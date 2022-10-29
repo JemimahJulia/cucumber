@@ -1,0 +1,18 @@
+package loading;
+
+public class Sample {
+	public void Addition(int a, int b) {
+		int sum = a+b;
+		System.out.println(sum);
+		}
+	public void StudentName(String name,char a) {
+		System.out.println("My name is:" +name);
+        System.out.println(a);
+	}
+	public static void main(String[] args) {
+		Sample s=new Sample();
+		s.Addition(10, 20);
+		s.StudentName("Jemi", 'S');
+	}
+
+}

@@ -1,0 +1,71 @@
+package com.selenium;
+import java.nio.channels.InterruptedByTimeoutException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class project2_automation {
+	
+	
+	public static void main(String[] args)  throws InterruptedException{
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\eclipse-workspace\\Selenium\\Driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://automationpractice.com/index.php"); 
+		driver.manage().window().maximize(); 
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		WebElement women = driver.findElement(By.xpath("//a[@title='Women']"));
+		
+		Actions ac = new Actions (driver);
+		ac.moveToElement(women).build().perform();
+		
+		WebElement casual_dress = driver.findElement(By.xpath("//a[@title='Casual Dresses']"));
+		casual_dress.click();
+		
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		
+	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    
+	    WebElement image = driver.findElement(By.xpath("//img[@title='Printed Dress']"));
+	    ac.moveToElement(image).build().perform();
+	    
+	    WebElement add_to_cart = driver.findElement(By.xpath("//a[@title='Add to cart']"));
+		add_to_cart.click();
+		
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
+		WebElement checkout = driver.findElement(By.xpath("//a[@title='Proceed to checkout']"));
+		checkout.click();
+		
+//		JavascriptExecutor js1=(JavascriptExecutor) driver;
+//	    js1.executeScript("window.scrollBy(0,500)");
+		
+//		WebElement quantity = driver.findElement(By.xpath("(//input[@autocomplete='off'])[2]"));
+//		quantity.sendKeys("6");
+		
+//		WebElement proceed_to_checkout = driver.findElement(By.xpath("(//a[@title='Proceed to checkout'])[2]"));
+//		proceed_to_checkout.click();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+}
+}

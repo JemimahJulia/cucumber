@@ -1,0 +1,16 @@
+package Day1;
+
+public class Details {
+       public void StudentName() {
+    	   System.out.println("My name is jemi");
+		
+	}
+       public void StudentAddress() {
+	      System.out.println ("Chennai");
+}
+    public static void main (String [] args) {
+    	Details d = new Details ();
+    	d.StudentName();
+    	d.StudentAddress();
+    }
+}

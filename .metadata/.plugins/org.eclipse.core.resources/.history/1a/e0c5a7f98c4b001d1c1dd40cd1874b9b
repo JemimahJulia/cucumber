@@ -1,0 +1,14 @@
+package loading;
+
+public class Marriage {
+	
+	private void girlName() {
+		System.out.println("Priya");
+		
+
+	}
+public static void main(String[] args) {
+	Marriage m = new Marriage();
+	m.girlName();
+}
+}
